@@ -1,5 +1,8 @@
-package com.example.damienapi;
+package com.example.damienapi.Client;
 
+import com.example.damienapi.Model.FirstApi.CryptoInfo.CryptoPricesOutput;
+import com.example.damienapi.Model.SecondApi.SecondCryptoCurrencyOutput;
+import com.example.damienapi.Model.FirstApi.LastWeekInfo.lastWeekCryptoPricesOutput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -40,10 +43,10 @@ public class CoingeckoClient {
 
     }
 
-    public ResponseEntity<?> getMarketInfo(String currency,String id){
+    public ResponseEntity<?> getMarketInfo(String currency,String id,String per_page){
         return
                 restTemplate.getForEntity(URL+"markets?vs_currency="+currency+"&ids="+id
-                                +"&order=market_cap_desc&per_page=10&page=1&sparkline=false",
+                                +"&order=market_cap_desc&per_page="+per_page+"&page=1&sparkline=false",
                         SecondCryptoCurrencyOutput[].class);
     }
 

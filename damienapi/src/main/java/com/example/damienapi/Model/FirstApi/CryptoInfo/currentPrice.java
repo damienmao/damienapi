@@ -1,35 +1,19 @@
-package com.example.damienapi;
+package com.example.damienapi.Model.FirstApi.CryptoInfo;
 
 import org.apache.commons.math3.util.Precision;
 
-public class priceChange24HInCurrency {
+public class currentPrice {
     private float usd;
     private float aud;
     private float jpy;
     private float btc;
 
-    public priceChange24HInCurrency(float usd, float aud, float jpy, float btc) {
+    public currentPrice(float usd, float aud, float jpy, float btc) {
         this.usd = usd;
         this.aud = aud;
         this.jpy=jpy;
         this.btc=btc;
 
-    }
-
-    public void setJpy(float jpy) {
-        this.jpy = jpy;
-    }
-
-    public void setBtc(float btc) {
-        this.btc = btc;
-    }
-
-    public void setUsd(float usd) {
-        this.usd = usd;
-    }
-
-    public void setAud(float aud) {
-        this.aud = aud;
     }
 
     public float getJpy() {
@@ -47,5 +31,20 @@ public class priceChange24HInCurrency {
     public float getAud() {
         return Precision.round(aud,3);
     }
-}
 
+    public void setJpy(float jpy) {
+        this.jpy = jpy;
+    }
+
+    public void setBtc(float btc) {
+        this.btc = btc;
+    }
+
+    public void setUsd(float usd) {
+        this.usd = usd;
+    }
+
+    public void setAud(float aud) {
+        this.aud = aud;
+    }
+}

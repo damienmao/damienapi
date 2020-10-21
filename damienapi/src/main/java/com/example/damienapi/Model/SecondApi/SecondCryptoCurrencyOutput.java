@@ -1,4 +1,4 @@
-package com.example.damienapi;
+package com.example.damienapi.Model.SecondApi;
 
 public class SecondCryptoCurrencyOutput  {
     private String id;

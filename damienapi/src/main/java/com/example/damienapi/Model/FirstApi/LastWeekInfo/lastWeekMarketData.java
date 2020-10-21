@@ -1,5 +1,7 @@
-package com.example.damienapi;
+package com.example.damienapi.Model.FirstApi.LastWeekInfo;
 
+
+import com.example.damienapi.Model.FirstApi.CryptoInfo.currentPrice;
 
 public class lastWeekMarketData {
     private currentPrice current_price;

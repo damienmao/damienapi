@@ -1,4 +1,4 @@
-package com.example.damienapi;
+package com.example.damienapi.Model.SecondApi;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

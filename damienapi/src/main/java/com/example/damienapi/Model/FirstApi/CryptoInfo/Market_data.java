@@ -1,4 +1,4 @@
-package com.example.damienapi;
+package com.example.damienapi.Model.FirstApi.CryptoInfo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -8,7 +8,7 @@ public class Market_data {
     private priceChange24HInCurrency priceChange24hInCurrency;
 
     @JsonProperty ("current_price")
-    private currentPrice currentPrice;
+    private com.example.damienapi.Model.FirstApi.CryptoInfo.currentPrice currentPrice;
 
     public priceChange24HInCurrency getPriceChange24hInCurrency() {
         return priceChange24hInCurrency;

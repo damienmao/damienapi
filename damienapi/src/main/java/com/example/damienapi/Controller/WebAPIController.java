@@ -1,7 +1,6 @@
-package com.example.damienapi;
+package com.example.damienapi.Controller;
 
-
-
+import com.example.damienapi.Service.PriceInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,9 +27,9 @@ public class WebAPIController {
     }
 
     @GetMapping(value="/markets")
-    public ResponseEntity<?> getMarketInfo(@RequestParam("currency") String currency,@RequestParam("id") String id){
+    public ResponseEntity<?> getMarketInfo(@RequestParam(defaultValue = "aud",name="currency") String currency,@RequestParam(defaultValue = "bitcoin",name="id") String id,@RequestParam(defaultValue = "10",name="per_page") String per_page){
 
-        return ResponseEntity.ok(priceInfoService.getMarketInfo(currency,id).getBody());
+        return ResponseEntity.ok(priceInfoService.getMarketInfo(currency,id,per_page).getBody());
     }
 
 
